@@ -1,0 +1,26 @@
+/*global*/
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(30 30 30);
+    color: rgb(200 200 200);
+}
+p{
+    line-height: 2;
+}
+img{
+    max-width: 100%;
+}
+
+/*utilities*/
+p.read-btn{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/*nav*/
+nav{
+    background-color: #dcdad7;
+}
+
+
