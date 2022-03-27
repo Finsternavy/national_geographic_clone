@@ -20,12 +20,12 @@
             <img class="small-logo" src="/img/ng-border.png" alt="National Geographic Logo">
         </div>
         <div class="menu">
-            <a class="login" href="#">Login</a>
-            <a class="hide" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a class="hide" href="#">Renew</a>
-            <a class="subscribe" href="#">Subscribe</a>
-            <a class="hide" href="#">Menu</a>
-            <a class="down-arrows" href="#"><i class="fa-solid fa-angles-down"></i></a>
+            <a class="link-login" href="#">Login</a>
+            <a class="hide link-search" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a class="hide link-renew" href="#">Renew</a>
+            <a class="link-subscribe" href="#">Subscribe</a>
+            <a class="hide link-menu-btn" href="#">Menu</a>
+            <a class="link-down-arrows" href="#"><i class="fa-solid fa-angles-down"></i></a>
         </div>
     </nav>
     <header>
@@ -35,63 +35,106 @@
             <div class="line">__</div>
         </div>
     </header><!--header ends-->
-    <main>
-        <div class="main-news">
-            <div class="hover">
-                <img src="/img/t_rex.jpg" alt="T-Rex">
-                <h3>Science</h3>
-                <p>Stan the T.rex found!</p>
-                <p class="read-btn"><i class="fa-solid fa-bars"></i> READ</p>
+    <div class="desktop-container">
+        <main>
+            <div class="main-news">
+                <div class="hover">
+                    <img src="/img/t_rex.jpg" alt="T-Rex">
+                    <h3>Science</h3>
+                    <p>Stan the T.rex found!</p>
+                    <p class="read-btn"><i class="fa-solid fa-bars"></i> READ</p>
+                </div>
+            </div>
+
+            <div class="secondary-container">
+                <div class="secondary-news">
+                    <div class="secondary-img-container">
+                        <img class="secondary-news-img" src="/img/pandemic.jpg" alt="Woman with mask">
+                    </div>
+                    <div class="secondary-text-container">
+                        <h3>Science</h3>
+                        <p>The 1918 pandemic mistake that changed medicine forever</p>
+                        <p class="read-btn"><i class="fa-solid fa-bars"></i> READ</p>
+                    </div>
+                </div>
+                <div class="secondary-news">
+                    <div class="secondary-img-container">
+                        <img class="secondary-news-img" src="/img/fish.jpg" alt="Two men catching large fish with hands">
+                    </div>
+                    <div class="secondary-text-container">
+                        <h3>Environment<span>Planet Possible</span></h3>
+                        <p>Inside the plan to save some of the biggest freshwater fish</p>
+                        <p class="read-btn"><i class="fa-solid fa-bars"></i> READ</p>
+                    </div>
+                </div>
+            </div>
+        </main><!--main ends-->
+
+        <div class="section">
+            <h2 class="h2"><span class="top-pick-span"></span> Today's Picks</h2>
+            <div class="todays-picks">
+
+                <div class="pick-item">
+                    <div class="pick-img-container">
+                        <img class="pick-img" src="/img/dragons_toes.jpg" alt="Dragon toes sea creature">
+                    </div>
+                    <div class="pick-text">
+                        <h3>Travel <span>Planet Possible</span></h3>
+                        <p>Explore the Oregon Coast-but don't touch the 'dragon toes'</p>
+                    </div>
+                </div>
+
+                <div class="pick-item">
+                    <div class="pick-img-container">
+                        <img class="pick-img" src="/img/tree-farm.jpg" alt="Tree farm">
+                    </div>
+                    <div class="pick-text">
+                        <h3>Environment <span>Planet Possible</span></h3>
+                        <p>The deceptively simple plan to replenish California's groundwater</p>
+                    </div>
+                </div>
+
+                <div class="pick-item">
+                    <div class="pick-img-container">
+                        <img class="pick-img" src="/img/children_under_desk.jpg" alt="Children hiding under tables">
+                    </div>
+                    <div class="pick-text">
+                        <h3>History & Culture</h3>
+                        <p>What was the Cold War-and are we headed to another one?</p>
+                    </div>
+                </div>
+
+                <div class="pick-item">
+                    <div class="pick-img-container">
+                        <img class="pick-img" src="/img/dinos_in_water.jpg" alt="Dinosaurs fighting under water">
+                    </div>
+                    <div class="pick-text">
+                        <h3>Science</h3>
+                        <p>New clues reveal the devastation the day the dinosaurs died</p>
+                    </div>
+                </div>
+
+                <div class="pick-item">
+                    <div class="pick-img-container">
+                        <img class="pick-img" src="/img/meteor_impact.jpg" alt="Metoer impacting earth">
+                    </div>
+                    <div class="pick-text">
+                        <h3>Travel</h3>
+                        <p>The surprising history of Hawai'i's hula tradition</p>
+                    </div>
+                </div>
+                
+                <div class="pick-item">
+                    <div class="pick-img-container">
+                        <img class="pick-img" src="/img/hula_tadition.jpg" alt="hula dancers">
+                    </div>
+                    <div class="pick-text">
+                        <h3>Travel <span>Planet Possible</span></h3>
+                        <p>Explore the Oregon Coast-but don't touch the 'dragon toes'</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="secondary-news">
-            <div class="secondary-news-img-container">
-                <img class="secondary-news-img" src="/img/pandemic.jpg" alt="Woman with mask">
-            </div>
-            <div class="secondary-news-text"><h3>Science</h3>
-                <p>The 1918 pandemic mistake that changed medicine forever</p>
-                <p class="read-btn"><i class="fa-solid fa-bars"></i> READ</p>
-            </div>
-        </div>
-        <div class="secondary-news">
-            <img src="/img/fish.jpg" alt="Two men catching large fish with hands">
-            <h3>Environment<span>Planet Possible</span></h3>
-            <p>Inside the plan to save some of the biggest freshwater fish</p>
-            <p class="read-btn"><i class="fa-solid fa-bars"></i> READ</p>
-        </div>
-    </main><!--main ends-->
-    <section>
-        <h2>Today's Picks</h2>
-        <div class="pick-item">
-            <img src="/img/dragons_toes.jpg" alt="Dragon toes sea creature">
-            <h3>Travel <span>Planet Possible</span></h3>
-            <p>Explore the Oregon Coast-but don't touch the 'dragon toes'</p>
-        </div>
-        <div class="pick-item">
-            <img src="/img/tree-farm.jpg" alt="Tree farm">
-            <h3>Environment <span>Planet Possible</span></h3>
-            <p>The deceptively simple plan to replenish California's groundwater</p>
-        </div>
-        <div class="pick-item">
-            <img src="/img/children_under_desk.jpg" alt="Children hiding under tables">
-            <h3>History & Culture</h3>
-            <p>What was the Cold War-and are we headed to another one?</p>
-        </div>
-        <div class="pick-item">
-            <img src="/img/dinos_in_water.jpg" alt="Dinosaurs fighting under water">
-            <h3>Science</h3>
-            <p>New clues reveal the devastation the day the dinosaurs died</p>
-        </div>
-        <div class="pick-item">
-            <img src="/img/meteor_impact.jpg" alt="Metoer impacting earth">
-            <h3>Travel</h3>
-            <p>The surprising history of Hawai'i's hula tradition</p>
-        </div>
-        <div class="pick-item">
-            <img src="/img/hula_tadition.jpg" alt="hula dancers">
-            <h3>Travel <span>Planet Possible</span></h3>
-            <p>Explore the Oregon Coast-but don't touch the 'dragon toes'</p>
-        </div>
-    </section>
+    </div>
 </body>
 </html>
