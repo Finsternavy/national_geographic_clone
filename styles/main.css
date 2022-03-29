@@ -135,12 +135,12 @@ div.div.header-container span{
 div.header-container p{
     position: relative;
 }
-span{
+span.header-span{
     position: relative;
     height: 100%;
     width: 100%;
 }
-span::after{
+span.header-span::after{
     content: "";
     background-color: var(--primary);
     position: absolute;
@@ -154,10 +154,10 @@ span::after{
     transform: scaleY(.1);
     z-index: -1;
 }
-span:hover{
+span.header-span:hover{
     color: rgb(0, 0, 0);
 }
-span:hover::after{
+span.header-span:hover::after{
     transform: scaleY(1.1);
     color: rgb(0, 0, 0);
 }
@@ -346,8 +346,17 @@ div.todays-picks{
     font-size: 2rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin-left: 1.5rem;
     position: relative;
+    margin-left: 10px;
+}
+.h2::before{
+    content: "";
+    position: absolute;
+    height: 26px;
+    top: 5px;
+    left: -10px;
+    width: 5px;
+    background-color: var(--primary);
 }
 .section-header{
     position: relative;
@@ -355,53 +364,15 @@ div.todays-picks{
     width: 100%;
     padding-bottom: 1.5rem;
 }
-.top-pick-span{
-    content: "";
+span.top-pick-span{
+    position: relative;
     width: 5px;
-    height: 1.8rem;
-    position: absolute;
-    left: -1.5rem;
-    top: 3px;
-    background-color: var(--primary);
-}
-/* .pick-item{
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 8rem;
-    max-width: 100%;
-}
-div.pick-img-container{
-    position: relative;
-    max-width: 80px;
-    height: 80px;
-    overflow: hidden;
-}
-.pick-img{
-    transform: scale(1);
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-.pick-text{
+    font-size: .9rem;
+    letter-spacing: 2px;
     padding-left: 1rem;
-    position: relative;
-    max-width: 100%;
-    max-height: 100%;
-    font-size: .8rem;
+    font-weight: 100;
 }
-.pick-text h3{
-    padding-top: .4rem;
-    font-weight: 700;
-    font-size: .8rem;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-.pick-text p{
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 1.5rem;
-} */
+
 .pick-item{
     margin: 0;
     display: grid;
@@ -423,6 +394,8 @@ div.pick-img-container{
 }
 .pick-text h3{
     margin-top: .3rem;
+    font-size: 1rem;
+    letter-spacing: 2px;
 }
 .pick-text p:hover{
     text-decoration: underline;
@@ -473,7 +446,7 @@ div.pick-img-container{
     }
     .desktop-container{
         width:100%;
-        max-width: 752px;
+        max-width: 982px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -496,11 +469,16 @@ div.pick-img-container{
         flex-wrap: wrap;
     }
     div.pick-item{
-        flex-basis: 50%;
+        flex-basis: 40%;
     }
     .pick-text{
         flex-wrap: wrap;
         padding-right: 1rem;
+        max-width: 75%;
+    }
+    .pick-item{
+        max-width: 50%;
+        columns: 2;
     }
 
     @media (min-width: 1105px){
