@@ -103,7 +103,8 @@ div.menu a.link-subscribe:hover{
 }
 a.link-subscribe:hover::after{
     transform: scaleX(1);
-}.link-down-arrows{
+}
+.link-down-arrows{
     font-size: .8rem;
     font-weight: 100;
 }
@@ -186,16 +187,22 @@ main{
     margin-inline: 1rem;
 }
 main div{
-    margin: 2%;
-    height: 20rem;
-    max-width: 980px;
+    margin-inline: 2%;
+    margin-bottom: 4%;
+    height: 100%;
 }
 div.main-news{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    z-index: 1;
+    
     overflow: hidden;
+}
+div.main-news-text{
     position: relative;
     height: 100%;
     width: 100%;
-    z-index: 1;
 }
 div.main-news:after{
     content: "";
@@ -210,25 +217,28 @@ div.main-news:after{
     bottom: 0;
     left: 0;
 }
-div.hover{
+.main-image-container{
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.main-image-container img{
+    position: relative;
     height: 100%;
     width: 100%;
-}
-div.main-news img{
-    position: relative;
     z-index: -1;
-    transform: scale(1.7);
-    top: -10px;
+    transform: scale(1.5);
+    top: 50px;
     transition: transform .25s ease;
 }
-div.main-news div.hover:hover img{
-    transform: scale(1.85);
+.main-image-container:hover img{
+    transform: scale(1.75);
 }
-.main-news p,
-.main-news h3{
+.main-news-text p,
+.main-news-text h3{
     width: 100%;
     position: relative;
-    bottom: 20px;
     padding-left: 1rem;
     margin-block: 0;
     font-size: .78rem;
@@ -237,10 +247,9 @@ div.main-news div.hover:hover img{
     text-transform: uppercase;
 }
 .main-news h3{
-    margin-bottom: -.3rem;
 }
-.main-news p{
-    font-size: 2rem;
+.main-news-text p{
+    font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: .5rem;
 }
@@ -250,7 +259,7 @@ main p.read-btn{
 .secondary-container{
     display: flex;
     flex-direction: column;
-    justify-items: baseline;
+    justify-items: center;
     align-items: center;
     height: 100%;
     width: 100%;
@@ -258,6 +267,8 @@ main p.read-btn{
 div.secondary-news{
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
     background-color: rgb(255, 255, 255);
@@ -294,18 +305,20 @@ div.secondary-news{
     position: relative;
 }
 .secondary-news p.read-btn{
+    font-size: .7rem;
     letter-spacing: 2px;
+    padding-bottom: 5px;
 }
 .secondary-img-container{
     margin: 0;
     position: relative;
-    min-height: 100%;
+    height: 100%;
     width: 100%;
     overflow: hidden;
 }
 img.secondary-news-img{
     object-fit: cover;
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
     height: 100%;
@@ -349,7 +362,7 @@ div.todays-picks{
     top: 3px;
     background-color: var(--primary);
 }
-.pick-item{
+/* .pick-item{
     position: relative;
     display: flex;
     align-items: center;
@@ -386,8 +399,32 @@ div.pick-img-container{
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.5rem;
+} */
+.pick-item{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 100px 300px;
+    margin-bottom: 30px;
+    column-gap: 30px;
+    font-size: 1rem;
 }
-
+.pick-img{
+    width: 100px;
+    height: 100px;
+}
+.pick-text{
+}
+.pick-text p{
+    color: white;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+.pick-text h3{
+    margin-top: .3rem;
+}
+.pick-text p:hover{
+    text-decoration: underline;
+}
 
 /*desktop*/
 @media (min-width: 768px){
@@ -443,7 +480,6 @@ div.pick-img-container{
         margin: 0;
     }
     .main-news{
-        padding-inline: -3rem;
     }
     .hover{
         margin: 0;
@@ -490,9 +526,16 @@ div.pick-img-container{
             height: 100%;
             flex-basis: 60%;
         }
+        .main-news{
+            max-height: 400px;
+        }
+        .main-news-text{
+            position: absolute;
+            top: -120px;
+        }
         div.secondary-container{
             position: relative;
-            max-height: 70%;
+            max-height: 300px;
             overflow: hidden;
         }
         .pick-img{
@@ -502,23 +545,28 @@ div.pick-img-container{
             width: 100%;
         }
         .secondary-news{
+            margin: 0;
             position: relative;
             height: 100%;
             width: 100%;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             overflow: hidden;
-            padding-bottom: 30%;
-            margin-top: -8rem;
         }
         .secondary-img-container{
             position: relative;
-            min-height: 100%;
+            height: 100%;
             width: 100%;
+            transform: scale(1);
+        }
+        .secondary-news-img{
+            width: fit-content;
         }
         .secondary-news dev{
             position: relative;
-            flex-basis: 50%;
+            height: 100%;
+            width: 100%;
         }
         .secondary-text-container{
             position: relative;

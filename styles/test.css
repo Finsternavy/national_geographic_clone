@@ -65,9 +65,8 @@ html{
     text-align: left;
 }
 .table-row{
-    border: 1px solid white;
+    border: 3px solid white;
     background-color: rgb(234, 236, 255);
-    margin-bottom: 1rem;
 }
 .table-header{
     color: rgb(7, 31, 137);
