@@ -379,7 +379,6 @@ span.top-pick-span{
     grid-template-columns: 100px 300px;
     margin-bottom: 30px;
     column-gap: 30px;
-    font-size: 1rem;
 }
 .pick-img{
     width: 100px;
@@ -389,13 +388,19 @@ span.top-pick-span{
 }
 .pick-text p{
     color: white;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.5rem;
 }
 .pick-text h3{
     margin-top: .3rem;
+<<<<<<< Updated upstream
     font-size: 1rem;
     letter-spacing: 2px;
+=======
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: 3px;
+>>>>>>> Stashed changes
 }
 .pick-text p:hover{
     text-decoration: underline;
